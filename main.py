@@ -112,6 +112,16 @@ def main():
                     for item in output['questions']:
                         df_qes.loc[len(df_qes)] = {'link':row['link'],'title':row['title'],"question":item['Question'],'answer':item['Answer'],'context':item['context']}   
             st.write(df_qes)
+
+            if len(df_qes) > 0:
+                csv = convert_df(df_qes)
+
+                st.download_button(
+                    label="Download data as CSV",
+                    data=csv,
+                    file_name='qa_pairs.csv',
+                    mime='text/csv',
+                ) 
 if __name__ == '__main__':
 	main()
  
