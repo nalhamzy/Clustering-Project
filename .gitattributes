@@ -1,4 +1,8 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 sv2_old/** filter=lfs diff=lfs merge=lfs -text
+sv2_old/vectors filter=lfs diff=lfs merge=lfs -text
+vectors filter=lfs diff=lfs merge=lfs -text
+vectors.* filter=lfs diff=lfs merge=lfs -text
+s2v_old/vectors* filter=lfs diff=lfs merge=lfs -text
 s2v_old/** filter=lfs diff=lfs merge=lfs -text
